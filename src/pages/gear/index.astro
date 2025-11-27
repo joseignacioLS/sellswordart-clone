@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const sections = [
+  {
+    title: "HEMA Gear & Weapons",
+    links: [
+      {
+        image: "/assets/images/purpleheart.png",
+        href: "https://www.woodenswords.com/?Click=37639",
+      },
+      {
+        image: "/assets/images/armstreet.png",
+        href: "https://armstreet.com/?promoline=e8b5b12f463cb1797703842cb4c11db6",
+      },
+      {
+        image: "/assets/images/amberdamare.png",
+        href: "https://www.artbyamberdamare.com/",
+      },
+      {
+        image: "/assets/images/sigiforge.png",
+        href: "https://sigiforge.com/",
+      },
+      {
+        image: "/assets/images/shoukat.png",
+        href: "https://shoukatmfgco.com/",
+      },
+      {
+        image: "/assets/images/zenwarriorarmory.png",
+        href: "https://www.zenwarriorarmory.com/",
+      },
+      {
+        image: "/assets/images/darkwoodarmory.png",
+        href: "https://www.darkwoodarmory.com/",
+      },
+    ],
+  },
+  {
+    title: "Sharp Weapons & Cutting",
+    links: [
+      {
+        image: "/assets/images/kultofathena.png",
+        href: "https://www.kultofathena.com/?koa=63738",
+      },
+      {
+        image: "/assets/images/kageyamaimports.png",
+        href: "https://kageyama.global/",
+      },
+      {
+        image: "/assets/images/koastudio.png",
+        href: "https://www.koastudio.net/",
+      },
+      {
+        image: "/assets/images/exgurkhakukri.png",
+        href: "https://gurkhahandicrafts.etsy.com/",
+      },
+    ],
+  },
+  {
+    title: "Clothing & Props",
+    links: [
+      {
+        image: "/assets/images/dirtyrottenpirateleather.png",
+        href: "https://www.etsy.com/shop/DirtyRottenPirate?fbclid=IwY2xjawHlUYFleHRuA2FlbQIxMAABHZh5PUqRLDs3sCVOIzFPTWNHCgaWi8_cky9jN0MPsRRxr-yEo3khaxyu4Q_aem_iAqD1v4BnwmI43uQYbAHTw",
+      },
+      {
+        image: "/assets/images/fakesteel.png",
+        href: "https://www.fakesteel.cz/?srsltid=AfmBOorOAgTA_Gmph2rwBvilkikDCu5yOLdcL4HDpyR2QXpFVIxw_4RM",
+      },
+      {
+        image: "/assets/images/volantedesign.png",
+        href: "https://www.volantedesign.us/",
+      },
+    ],
+  },
+];
+---
+
+<Layout>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-4 p-4"
+  >
+    {
+      sections.map(({ title, links }) => {
+        return (
+          <section class="w-full flex flex-col items-center bg-red-700 rounded-lg p-4 h-fit">
+            <h2 class="text-3xl text-center font-bold">{title}</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              {links.map(({ image, href }) => {
+                return (
+                  <a class="" href={href} target="_blank">
+                    <img class="" src={image} />
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })
+    }
+  </div>
+</Layout>

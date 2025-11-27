@@ -1,0 +1,35 @@
+---
+import { routes } from "../routes";
+import { MobileMenu } from "./MobileMenu";
+
+const currentPath = Astro.url.pathname;
+const simpleHeader = currentPath !== "/";
+---
+
+<header
+  class={`${
+    simpleHeader
+      ? "bg-gray-950 flex justify-between bg-[url('/assets/images/logo.webp')] bg-left bg-contain bg-no-repeat"
+      : "bg-[url('/assets/images/banner.webp')] bg-cover md:h-128 h-38 bg-center bg-no-repeat"
+  } py-4 px-8 min-h-16`}
+>
+  <h1 class="hidden">Sellswordarts</h1>
+  <nav class="ml-auto w-fit justify-end hidden md:flex">
+    <ul class="flex gap-4 flex-wrap">
+      {
+        routes.map(({ path, label }) => {
+          const selected = path === currentPath;
+          const external = /https?:\/\//.test(path);
+          return (
+            <li class={`${selected ? "border-b-1  font-bold" : ""}`}>
+              <a href={path} target={external ? "_blank" : "_self"}>
+                {label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+  <MobileMenu client:only />
+</header>

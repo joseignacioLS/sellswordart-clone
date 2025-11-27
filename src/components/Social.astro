@@ -1,0 +1,11 @@
+---
+const { link, icon } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  class="relative hover:scale-125 transition-transform duration-200 aspect-square"
+>
+  <img class="h-6 md:h-8" src={icon} />
+</a>
