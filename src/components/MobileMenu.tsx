@@ -33,7 +33,7 @@ export const MobileMenu: React.FC<{}> = ({}) => {
 
           <img src="/assets/images/logo.webp" className="h-18" />
 
-          <ul className="flex flex-col gap-4 text-2xl text-center">
+          <ul className="flex flex-col gap-4 text-3xl text-center">
             {routes.map(({ path, label }) => {
               const external = /https?:\/\//.test(path);
               return (
