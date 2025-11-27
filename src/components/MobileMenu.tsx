@@ -20,7 +20,7 @@ export const MobileMenu: React.FC<{}> = ({}) => {
         />
       </button>
       {showMenu && (
-        <nav className="md:hidden fixed top-0 right-0 w-full h-full bg-gray-950 flex justify-center items-center z-10">
+        <nav className="md:hidden fixed top-0 right-0 w-full h-full bg-gray-950 flex flex-col gap-4 justify-center items-center z-10">
           <button
             className="cursor-pointer absolute top-4 right-4 md:hidden h-8 z-20"
             onClick={() => setShowMenu((v) => !v)}
@@ -30,6 +30,9 @@ export const MobileMenu: React.FC<{}> = ({}) => {
               src={`/assets/icons/${showMenu ? "menu copy" : "menu"}.svg`}
             />
           </button>
+
+          <img src="/assets/images/logo.webp" className="h-18" />
+
           <ul className="text-2xl flex flex-col gap-4 text-center">
             {routes.map(({ path, label }) => {
               const external = /https?:\/\//.test(path);

@@ -9,10 +9,13 @@ const simpleHeader = currentPath !== "/";
 <header
   class={`${
     simpleHeader
-      ? "bg-gray-950 flex justify-between bg-[url('/assets/images/logo.webp')] bg-left bg-contain bg-no-repeat"
-      : "bg-[url('/assets/images/banner.webp')] bg-cover md:h-128 h-38 bg-center bg-no-repeat"
-  } py-4 px-8 min-h-16`}
+      ? "bg-gray-950"
+      : "justify-between bg-[url('/assets/images/banner.webp')] bg-cover md:h-128 h-38 bg-center bg-no-repeat"
+  } flex py-4 px-8 min-h-16 w-full`}
 >
+  <a href="/">
+    <img src="/assets/images/logo.webp" class="h-10" />
+  </a>
   <h1 class="hidden">Sellswordarts</h1>
   <nav class="ml-auto w-fit justify-end hidden md:flex">
     <ul class="flex gap-4 flex-wrap">
