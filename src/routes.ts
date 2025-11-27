@@ -4,20 +4,20 @@ export const routes = [
     label: "Home",
   },
   {
-    path: "/about/",
-    label: "About",
+    path: "/support/",
+    label: "Support Us",
   },
   {
     path: "https://sellsword-arts-shop.fourthwall.com/",
     label: "Merch",
   },
   {
-    path: "/support/",
-    label: "Support the Channel",
+    path: "/gear/",
+    label: "Gear",
   },
   {
-    path: "/gear/",
-    label: "Gear and Weapons",
+    path: "/about/",
+    label: "About",
   },
   {
     path: "/contact/",
