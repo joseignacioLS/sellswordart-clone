@@ -4,7 +4,7 @@ export const routes = [
     label: "Home",
   },
   {
-    path: "/about",
+    path: "/about/",
     label: "About",
   },
   {
@@ -12,15 +12,15 @@ export const routes = [
     label: "Merch",
   },
   {
-    path: "/support",
+    path: "/support/",
     label: "Support the Channel",
   },
   {
-    path: "/gear",
+    path: "/gear/",
     label: "Gear and Weapons",
   },
   {
-    path: "/contact",
+    path: "/contact/",
     label: "Contact",
   },
 ];
