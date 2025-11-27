@@ -7,11 +7,11 @@ const simpleHeader = currentPath !== "/";
 ---
 
 <header
-  class={`${
+  class={`py-4 px-8 min-h-16 w-full flex items-start ${
     simpleHeader
       ? "bg-gray-950"
-      : "justify-between bg-[url('/assets/images/banner.webp')] bg-cover md:h-128 h-38 bg-center bg-no-repeat"
-  } flex py-4 px-8 min-h-16 w-full`}
+      : " h-38 md:h-128 justify-between bg-[url('/assets/images/banner.webp')] bg-cover bg-center bg-no-repeat"
+  }`}
 >
   <a href="/">
     <img src="/assets/images/logo.webp" class="h-10" />

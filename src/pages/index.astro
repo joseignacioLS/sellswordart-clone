@@ -6,8 +6,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="w-full bg-red-700 py-4 sticky top-0 z-5">
-    <div class="grid grid-cols-4 mx-auto w-fit gap-8">
+  <section class="sticky z-5 top-0 py-4 w-full bg-red-700">
+    <div class="mx-auto w-fit grid grid-cols-4 gap-8">
       <Social
         link="https://www.youtube.com/@SellswordArts"
         icon="/assets/icons/youtube.svg"
@@ -27,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section class="w-full px-4">
+  <section class="px-4 w-full">
     <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
       <ImageCard
         link="https://www.gofundme.com/f/overqualified-looking-for-group?attribution_id=sl:fadf5d8b-c3a0-4517-aa27-213b28fbe237&lang=en_US&ts=1763950533&utm_campaign=man_sharesheet_dash&utm_content=amp17_control&utm_medium=customer&utm_source=copy_link"
@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
         image="/assets/images/dnd.webp"
       >
         <p>Support us on GoFundMe so we can make it happen</p>
-        <div class="w-full flex gap-4 justify-center">
+        <div class="w-full flex justify-center gap-4">
           <img class="h-8" src="/assets/icons/gofundme.svg" />
           <img class="h-8" src="/assets/icons/dnd.svg" />
         </div>
@@ -59,7 +59,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
   <section
-    class="sticky z-5 bottom-2 flex flex-col md:flex-row justify-center flex-wrap gap-2 px-2 w-full"
+    class="sticky z-5 bottom-2 px-2 w-full flex flex-col md:flex-row justify-center flex-wrap gap-2"
   >
     <Card link="https://patreon.com/sellswordarts">
       <img class="h-4 md:h-8" src="/assets/icons/patreon.svg" />

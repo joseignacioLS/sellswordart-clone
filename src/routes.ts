@@ -1,4 +1,9 @@
-export const routes = [
+type Route = {
+  path: string;
+  label: string;
+};
+
+export const routes: Route[] = [
   {
     path: "/",
     label: "Home",
